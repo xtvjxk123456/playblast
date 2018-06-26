@@ -1,8 +1,0 @@
-﻿  playblastRenderOperation.cpp
-  playblastRenderOverride.cpp
-  pluginMain.cpp
-    正在创建库 D:\pythonSource\playblast\playblast\x64\Release\playblast.lib 和对象 D:\pythonSource\playblast\playblast\x64\Release\playblast.exp
-  正在生成代码
-  All 21 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  playblast.vcxproj -> D:\pythonSource\playblast\playblast\x64\Release\playblast.mll
