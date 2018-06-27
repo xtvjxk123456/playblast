@@ -62,7 +62,7 @@ MStatus playblastRenderOverride::updateRenderOperations()
 	if (initOperations)
 	{
 		// 1.Regular scene render
-		MHWRender::MSceneRender * sceneOp = new MHWRender::MSceneRender("sceneRender");
+		MHWRender::MSceneRender * sceneOp = new MHWRender::MSceneRender("scene");
 		mRenderOperations[0] = sceneOp;
 
 		// 2. There ops are for playback

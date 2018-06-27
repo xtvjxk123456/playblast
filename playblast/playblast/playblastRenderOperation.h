@@ -10,7 +10,9 @@ public:
 	virtual ~PlayblastRenderOperation();
 
 	virtual MStatus execute(const MHWRender::MDrawContext & drawContext);
-
+	virtual bool hasUIDrawables() const;
+	virtual void addUIDrawables(MHWRender::MUIDrawManager& drawManager,const MHWRender::MFrameContext& frameContext);
+	
 protected:
 	MHWRender::MRenderOverride * mOverride;
 	

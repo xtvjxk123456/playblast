@@ -9,6 +9,7 @@
 #include <maya/MString.h>
 #include <maya/MFnPlugin.h>
 #include <maya/MViewport2Renderer.h>
+#include <maya/MGlobal.h>
 
 #include "playblastRenderOverride.h"
 
@@ -29,6 +30,7 @@ MStatus initializePlugin(MObject obj)
 		{
 			playblastRenderOverrideInstance = new playblastRenderOverride("playblastRenderOverride");
 			renderer->registerOverride(playblastRenderOverrideInstance);
+
 		}
 	}
 
