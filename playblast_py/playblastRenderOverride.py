@@ -10,7 +10,7 @@ import maya.mel as mel
 
 ###############################################################################
 
-__author__ = 'test'
+__author__ = 'yamahigashi'
 __version__ = '0.1.0'
 
 
@@ -158,7 +158,7 @@ class ManipulatorSceneRender(omr.MUserRenderOperation):
         zcol = self.hiColor if activeAxis == 2 else self.zcolor
 
         manager.beginDrawable()
-
+        # 因为这个draw的是3d,所以源代码需要drawInxray
         if "move" == tool:
             self._drawArrow(manager, point, worldMat, rotMat, self.xmat, xcol)
             self._drawArrow(manager, point, worldMat, rotMat, self.ymat, ycol)
