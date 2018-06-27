@@ -248,16 +248,25 @@ class ManipulatorSceneRender(omr.MUserRenderOperation):
             return basePoint.distanceTo(camPos) * 0.1
 
 
+class SimpleSceneRender(omr.MSceneRender):
+    def __init__(self, name):
+        super(SimpleSceneRender, self).__init__(name)
+        # self.clearOperation().setClearColor([0.529, 0.612, 0.694, 1.0])
+        # self.clearOperation().setClearColor2([0.04, 0.04, 0.04, 1.0])
+        self.clearOperation().setClearColor([0.059, 0.059, 0.059, 1.0])
+        self.clearOperation().setClearColor2([0.529, 0.612, 0.694, 1.0])
+        self.clearOperation().setClearGradient(True)
+
+
 class DrawManipulatorOverride(omr.MRenderOverride):
     """Pass."""
 
     def __init__(self, name):
-        # type: (Text) -> None
         self.operatioIndex = 0
         self.operations = [
-            omr.MSceneRender("scene"),
+            SimpleSceneRender("scene"),
             ManipulatorSceneRender("manipulatorRender"),
-            omr.MHUDRender(),
+            # omr.MHUDRender(),
             omr.MPresentTarget("present")
         ]
 
