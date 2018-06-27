@@ -37,3 +37,6 @@ playblast/x64/
 playblast/playblast/x64/
 .vs/
 
+#python
+*.pyc
+
