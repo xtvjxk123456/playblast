@@ -40,3 +40,4 @@ playblast/playblast/x64/
 #python
 *.pyc
 
+.idea/
